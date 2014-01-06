@@ -1,6 +1,6 @@
 {
-    "name": "cornernote/gii-templates",
-    "description": "Better templates for the Gii code generator.",
+    "name": "cornernote/gii-tasty-templates",
+    "description": "Tasty templates for the Gii code generator.",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": ["yii", "gii", "mrphp"],
