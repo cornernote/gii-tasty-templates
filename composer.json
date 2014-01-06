@@ -1,0 +1,21 @@
+{
+    "name": "cornernote/gii-templates",
+    "description": "Better templates for the Gii code generator.",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": ["yii", "gii", "mrphp"],
+    "authors": [
+        {
+            "name": "Brett O'Donnell",
+            "email": "cornernote@gmail.com",
+            "homepage": "http://mrphp.com.au/"
+        },
+        {
+            "name": "Zain ul abidin",
+            "email": "zainengineer@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii": "1.1.14"
+    }
+}
