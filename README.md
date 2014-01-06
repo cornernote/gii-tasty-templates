@@ -1,6 +1,6 @@
-# Gii Templates
+# Gii Tasty Templates
 
-Better templates for the Gii code generator.
+Tasty templates for the Gii code generator.
 
 
 ## Installation
