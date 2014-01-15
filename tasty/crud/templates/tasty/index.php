@@ -40,7 +40,7 @@ echo "        'label' => Yii::t('app', 'Reset Filters'),\n";
 echo "        'url' => array('/" . lcfirst($this->modelClass) . "/index'),\n";
 echo "    );\n";
 echo "}\n";
-echo "echo TbHtml::pills($menu);\n";
+echo "echo TbHtml::pills(\$menu);\n";
 echo "\n";
 echo "// search\n";
 echo "\$this->renderPartial('/" . lcfirst($this->modelClass) . "/_search', array(\n";
