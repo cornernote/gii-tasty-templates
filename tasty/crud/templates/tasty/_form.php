@@ -19,7 +19,7 @@ echo "\n";
 echo "/** @var ActiveForm \$form */\n";
 echo "\$form = \$this->beginWidget('ActiveForm', array(\n";
 echo "    'id' => '" . lcfirst($this->modelClass) . "-form',\n";
-echo "    'type' => 'horizontal',\n";
+echo "    //'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,\n";
 echo "    //'enableAjaxValidation' => true,\n";
 echo "));\n";
 echo "echo \$form->beginModalWrap();\n";
