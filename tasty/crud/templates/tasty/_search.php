@@ -17,8 +17,8 @@ echo " * @var \$" . lcfirst($this->modelClass) . " " . $this->modelClass . "\n";
 echo " */\n";
 echo "\n";
 echo "/** @var ActiveForm \$form */\n";
-echo "\$form = \$this->beginWidget('application.widgets.ActiveForm', array(\n";
-//echo "	'action' => Yii::app()->createUrl(\$this->route),\n";
+echo "\$form = \$this->beginWidget('ActiveForm', array(\n";
+echo "	//'action' => Yii::app()->createUrl(\$this->route),\n";
 echo "	'type' => 'horizontal',\n";
 echo "	'method' => 'get',\n";
 echo "	'htmlOptions' => array('class' => 'hide'),\n";
@@ -28,7 +28,16 @@ echo "\n";
 echo "echo '<fieldset>';\n";
 echo "echo '<legend>' . \$this->getName() . ' ' .Yii::t('app', 'Search') . '</legend>';\n";
 foreach ($this->tableSchema->columns as $column) {
-    echo "echo \$form->textFieldRow(\$" . lcfirst($this->modelClass) . ", '" . $column->name . "');\n";
+    if ($column->type === 'boolean')
+        $inputField = 'checkBoxControlGroup';
+    elseif (stripos($column->dbType, 'text') !== false)
+        $inputField = 'textAreaControlGroup';
+    elseif (preg_match('/^(password|pass|passwd|passcode)$/i', $column->name))
+        $inputField = 'passwordFieldControlGroup';
+    else
+        $inputField = 'textFieldControlGroup';
+
+    echo "echo \$form->" . $inputField . "(\$" . lcfirst($this->modelClass) . ", '" . $column->name . "');\n";
 }
 echo "echo '</fieldset>';\n";
 echo "\n";
