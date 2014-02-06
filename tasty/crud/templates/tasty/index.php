@@ -27,7 +27,7 @@ echo "\$menu[] = array(\n";
 echo "    'label' => Yii::t('app', 'Create') . ' ' . \$this->getName(),\n";
 echo "    'url' => array('/" . lcfirst($this->modelClass) . "/create'),\n";
 echo "    'active' => true,\n";
-echo "    'htmlOptions' => array('data-toggle' => 'modal-remote'),\n";
+echo "    'linkOptions' => array('data-toggle' => 'modal-remote'),\n";
 echo ");\n";
 echo "\$menu[] = array(\n";
 echo "    'label' => Yii::t('app', 'Search'),\n";
