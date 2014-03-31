@@ -30,7 +30,7 @@ echo "    public function accessRules()\n";
 echo "    {\n";
 echo "        return array(\n";
 echo "            array('allow',\n";
-echo "                'actions' => array('index', 'view', 'log', 'create', 'update', 'delete'),\n";
+echo "                'actions' => array('index', 'view', 'create', 'update', 'delete'),\n";
 echo "                'roles' => array('admin'),\n";
 echo "                //'users' => array('*','@','?'), // all, user, guest\n";
 echo "            ),\n";
