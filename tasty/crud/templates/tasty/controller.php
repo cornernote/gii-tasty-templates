@@ -109,7 +109,7 @@ echo "        //\$this->performAjaxValidation(\$" . lcfirst($this->modelClass) .
 echo "        if (isset(\$_POST['" . $this->modelClass . "'])) {\n";
 echo "            \$" . lcfirst($this->modelClass) . "->attributes = \$_POST['" . $this->modelClass . "'];\n";
 echo "            if (\$" . lcfirst($this->modelClass) . "->save()) {\n";
-echo "                Yii::app()->user->addFlash(strtr('" . $this->modelClass . " :name has been created.', array(':name' => \$" . lcfirst($this->modelClass) . "->getName())), 'success');\n";
+echo "                Yii::app()->user->addFlash(Yii::t('app', '" . $this->modelClass . " :name has been created.', array(':name' => \$" . lcfirst($this->modelClass) . "->getName())), 'success');\n";
 echo "                \$this->redirect(Yii::app()->returnUrl->getUrl(\$" . lcfirst($this->modelClass) . "->getUrl()));\n";
 echo "            }\n";
 echo "            //Yii::app()->user->addFlash(Yii::t('app', '" . $this->modelClass . " could not be created.'), 'warning');\n";
@@ -139,7 +139,7 @@ echo "        //\$this->performAjaxValidation(\$" . lcfirst($this->modelClass) .
 echo "        if (isset(\$_POST['" . $this->modelClass . "'])) {\n";
 echo "            \$" . lcfirst($this->modelClass) . "->attributes = \$_POST['" . $this->modelClass . "'];\n";
 echo "            if (\$" . lcfirst($this->modelClass) . "->save()) {\n";
-echo "                Yii::app()->user->addFlash(strtr('" . $this->modelClass . " :name has been updated.', array(':name' => \$" . lcfirst($this->modelClass) . "->getName())), 'success');\n";
+echo "                Yii::app()->user->addFlash(Yii::t('app', '" . $this->modelClass . " :name has been updated.', array(':name' => \$" . lcfirst($this->modelClass) . "->getName())), 'success');\n";
 echo "                \$this->redirect(Yii::app()->returnUrl->getUrl(\$" . lcfirst($this->modelClass) . "->getUrl()));\n";
 echo "            }\n";
 echo "            //Yii::app()->user->addFlash(Yii::t('app', '" . $this->modelClass . " could not be updated.'), 'warning');\n";
@@ -167,7 +167,7 @@ echo "                if (!\$" . lcfirst($this->modelClass) . ") {\n";
 echo "                    continue;\n";
 echo "                }\n";
 echo "                call_user_func(array(\$" . lcfirst($this->modelClass) . ", \$task));\n";
-echo "                Yii::app()->user->addFlash(strtr('" . $this->modelClass . " :name has been :tasked.', array(\n";
+echo "                Yii::app()->user->addFlash(Yii::t('app', '" . $this->modelClass . " :name has been :tasked.', array(\n";
 echo "                    ':name' => \$" . lcfirst($this->modelClass) . "->getName(),\n";
 echo "                    ':tasked' => \$task . 'd',\n";
 echo "                )), 'success');\n";
