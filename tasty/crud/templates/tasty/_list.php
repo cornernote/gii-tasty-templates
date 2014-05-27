@@ -12,8 +12,8 @@
 
 echo "<?php\n";
 echo "/**\n";
-echo " * @var \$this " . $this->controllerClass . "\n";
-echo " * @var \$" . lcfirst($this->modelClass) . " " . $this->modelClass . "\n";
+echo " * @var " . $this->controllerClass . " \$this\n";
+echo " * @var " . $this->modelClass . " \$" . lcfirst($this->modelClass) . "\n";
 echo " */\n";
 echo "\n";
 echo "// list\n";

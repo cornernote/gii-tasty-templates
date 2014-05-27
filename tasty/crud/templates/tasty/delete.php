@@ -12,7 +12,7 @@
 
 echo "<?php\n";
 echo "/**\n";
-echo " * @var \$this " . $this->controllerClass . "\n";
+echo " * @var " . $this->controllerClass . " \$this\n";
 echo " * @var \$ids int[]\n";
 echo " * @var \$task string\n";
 echo " */\n";
