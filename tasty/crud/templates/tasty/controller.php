@@ -60,6 +60,7 @@ echo "     */\n";
 echo "    public function actionIndex()\n";
 echo "    {\n";
 echo "        \$" . lcfirst($this->modelClass) . " = new " . $this->modelClass . "('search');\n";
+echo "        \$" . lcfirst($this->modelClass) . "->unsetAttributes();  // clear any default values;\n";
 echo "        if (!empty(\$_GET['" . $this->modelClass . "']))\n";
 echo "            \$" . lcfirst($this->modelClass) . "->attributes = \$_GET['" . $this->modelClass . "'];\n";
 echo "\n";
