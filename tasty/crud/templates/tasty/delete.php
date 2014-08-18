@@ -22,7 +22,7 @@ echo "\n";
 echo "/** @var ActiveForm \$form */\n";
 echo "\$form = \$this->beginWidget('ActiveForm', array(\n";
 echo "    'id' => '" . lcfirst($this->modelClass) . "-' . \$task . '-form',\n";
-echo "    'type' => 'horizontal',\n";
+echo "    'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,\n";
 echo "    'action' => array('/" . lcfirst($this->modelClass) . "/delete', 'task' => \$task, 'confirm' => 1),\n";
 echo "));\n";
 echo "echo \$form->getGridIdHiddenFields(\$ids);\n";
