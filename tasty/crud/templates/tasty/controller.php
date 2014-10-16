@@ -47,7 +47,7 @@ echo "     */\n";
 echo "    public function beforeRender(\$view)\n";
 echo "    {\n";
 echo "        if (\$view != 'index') {\n";
-echo "            \$this->addBreadcrumb(Yii::t('app', \$this->getName(true)), Yii::app()->user->getState('index." . lcfirst($this->modelClass) . "', array('/" . lcfirst($this->modelClass) . "/index')));\n";
+echo "            \$this->addBreadcrumb(Yii::t('app', \$this->getName(true)), Yii::app()->user->getState('index." . $this->controller . "', array('/" . $this->controller . "/index')));\n";
 echo "        }\n";
 echo "        return parent::beforeRender(\$view);\n";
 echo "    }\n";
@@ -173,7 +173,7 @@ echo "                    ':name' => \$" . lcfirst($this->modelClass) . "->getNa
 echo "                    ':tasked' => \$task . 'd',\n";
 echo "                )), 'success');\n";
 echo "            }\n";
-echo "            \$this->redirect(Yii::app()->returnUrl->getUrl(Yii::app()->user->getState('index." . lcfirst($this->modelClass) . "', array('/" . lcfirst($this->modelClass) . "/index'))));\n";
+echo "            \$this->redirect(Yii::app()->returnUrl->getUrl(Yii::app()->user->getState('index." . $this->controller . "', array('/" . $this->controller . "/index'))));\n";
 echo "        }\n";
 echo "\n";
 echo "        \$this->render('delete', array(\n";
