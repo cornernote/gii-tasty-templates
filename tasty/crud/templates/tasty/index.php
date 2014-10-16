@@ -16,7 +16,7 @@ echo " * @var " . $this->controllerClass . " \$this\n";
 echo " * @var " . $this->modelClass . " \$" . lcfirst($this->modelClass) . "\n";
 echo " */\n";
 echo "\n";
-echo "Yii::app()->user->setState('index." . lcfirst($this->modelClass) . "', Yii::app()->request->requestUri);\n";
+echo "Yii::app()->user->setState('index." . $this->controller . "', Yii::app()->request->requestUri);\n";
 echo "\$this->pageTitle = \$this->getName(true);\n";
 echo "\n";
 echo "\$this->renderPartial('_menu');\n";
